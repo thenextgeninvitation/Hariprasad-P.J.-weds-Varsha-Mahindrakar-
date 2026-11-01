@@ -100,7 +100,7 @@ html.locked,html.locked body{overflow:hidden;height:100%}
 .bgphoto .ph{position:absolute;inset:0;background:var(--photo) 50% 100%/auto 112% no-repeat}
 @media (min-aspect-ratio:15/16){.bgphoto .ph{-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}}
 @media (max-aspect-ratio:15/16){.bgphoto{--photo:var(--photo-m)}
-.bgphoto .ph{--w:min(155vw,150vh);--b:calc(6vh + var(--w)*.666);background-size:var(--w) auto;background-position:calc(50vw - var(--w)*.568) 6vh;-webkit-mask-image:linear-gradient(180deg,transparent 3vh,#000 11vh,#000 calc(var(--b) - 14vh),transparent var(--b));mask-image:linear-gradient(180deg,transparent 3vh,#000 11vh,#000 calc(var(--b) - 14vh),transparent var(--b))}}
+.bgphoto .ph{--w:min(155vw,150vh);--b:calc(var(--w)*.666);background-size:var(--w) auto;background-position:calc(50vw - var(--w)*.568) 0;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 calc(var(--b) - 14vh),transparent var(--b));mask-image:linear-gradient(180deg,#000 0,#000 calc(var(--b) - 14vh),transparent var(--b))}}
 .bgphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,236,246,0) 0%,rgba(255,236,246,.04) 52%,rgba(238,226,255,.26) 85%)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,0) 0%,rgba(30,5,25,.1) 52%,rgba(16,4,26,.38) 85%)}}
 :root[data-theme="dark"] .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,0) 0%,rgba(30,5,25,.1) 52%,rgba(16,4,26,.38) 85%)}
