@@ -95,13 +95,14 @@ html.locked,html.locked body{overflow:hidden;height:100%}
 .rv.in,.noanim .rv{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.orbs i{animation:none}.rv{opacity:1;transform:none;transition:none}}
 
-.bgphoto{position:fixed;inset:0;z-index:-2;background:url("wed.jpeg") 50% 22%/cover no-repeat}
-@media (max-aspect-ratio:1/1){.bgphoto{background-image:url("wed1.jpeg");background-position:50% 10%}}
-.bgphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,236,246,.42),rgba(238,226,255,.55))}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgphoto::after{background:linear-gradient(160deg,rgba(40,6,28,.5),rgba(16,4,26,.66))}}
-:root[data-theme="dark"] .bgphoto::after{background:linear-gradient(160deg,rgba(40,6,28,.5),rgba(16,4,26,.66))}
-.orbs i{opacity:.35}
-.hero{align-items:flex-end;padding-top:46vh;padding-top:46svh}
+.bgphoto{position:fixed;inset:0;z-index:-2;background:url("wed.jpeg") 50% 0%/cover no-repeat}
+@media (max-aspect-ratio:1/1){.bgphoto{background-image:url("wed1.jpeg");background-position:50% 0%}}
+.bgphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,236,246,.04) 0%,rgba(255,236,246,.12) 38%,rgba(238,226,255,.62) 72%)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,.04) 0%,rgba(30,5,25,.22) 38%,rgba(16,4,26,.72) 72%)}}
+:root[data-theme="dark"] .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,.04) 0%,rgba(30,5,25,.22) 38%,rgba(16,4,26,.72) 72%)}
+.orbs i{opacity:.22}
+.hero{align-items:flex-end;padding-top:max(44vh,29.5vw);padding-top:max(44svh,29.5vw)}
+@media (max-aspect-ratio:1/1){.hero{padding-top:max(56vh,84vw);padding-top:max(56svh,84vw)}}
 </style>
 </head>
 <body>
