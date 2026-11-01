@@ -95,18 +95,20 @@ html.locked,html.locked body{overflow:hidden;height:100%}
 .rv.in,.noanim .rv{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.orbs i{animation:none}.rv{opacity:1;transform:none;transition:none}}
 
-.bgphoto{position:fixed;inset:0;z-index:-2;background:url("wed.jpeg") 50% 0%/cover no-repeat}
-@media (max-aspect-ratio:1/1){.bgphoto{background-image:url("wed1.jpeg");background-position:50% 0%}}
-.bgphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,236,246,.04) 0%,rgba(255,236,246,.12) 38%,rgba(238,226,255,.62) 72%)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,.04) 0%,rgba(30,5,25,.22) 38%,rgba(16,4,26,.72) 72%)}}
-:root[data-theme="dark"] .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,.04) 0%,rgba(30,5,25,.22) 38%,rgba(16,4,26,.72) 72%)}
+.bgphoto{--photo:url("wed3.jpeg");position:fixed;inset:0;z-index:-2;overflow:hidden}
+.bgphoto::before{content:"";position:absolute;inset:-50px;background:var(--photo) center/cover;filter:blur(30px) saturate(1.15)}
+.bgphoto .ph{position:absolute;inset:0;background:var(--photo) 50% 0/contain no-repeat}
+@media (max-aspect-ratio:5/6){.bgphoto .ph{background-size:cover}}
+@media (min-aspect-ratio:5/6){.bgphoto .ph{-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}}
+.bgphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,236,246,.04) 0%,rgba(255,236,246,.12) 52%,rgba(238,226,255,.62) 80%)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,.04) 0%,rgba(30,5,25,.2) 52%,rgba(16,4,26,.72) 80%)}}
+:root[data-theme="dark"] .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,.04) 0%,rgba(30,5,25,.2) 52%,rgba(16,4,26,.72) 80%)}
 .orbs i{opacity:.22}
-.hero{align-items:flex-end;padding-top:max(44vh,29.5vw);padding-top:max(44svh,29.5vw)}
-@media (max-aspect-ratio:1/1){.hero{padding-top:max(56vh,84vw);padding-top:max(56svh,84vw)}}
+.hero{align-items:flex-end;padding-top:58vh;padding-top:58svh}
 </style>
 </head>
 <body>
-<div class="bgphoto" aria-hidden="true"></div>
+<div class="bgphoto" aria-hidden="true"><div class="ph"></div></div>
 <div class="orbs"><i></i><i></i><i></i></div>
 <canvas id="water" aria-hidden="true"></canvas>
 <div id="intro">
