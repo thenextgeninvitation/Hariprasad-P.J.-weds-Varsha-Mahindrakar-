@@ -94,9 +94,18 @@ html.locked,html.locked body{overflow:hidden;height:100%}
 .rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
 .rv.in,.noanim .rv{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.orbs i{animation:none}.rv{opacity:1;transform:none;transition:none}}
+
+.bgphoto{position:fixed;inset:0;z-index:-2;background:url("wed.jpeg") 50% 22%/cover no-repeat}
+@media (max-aspect-ratio:1/1){.bgphoto{background-image:url("wed1.jpeg");background-position:50% 10%}}
+.bgphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,236,246,.42),rgba(238,226,255,.55))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgphoto::after{background:linear-gradient(160deg,rgba(40,6,28,.5),rgba(16,4,26,.66))}}
+:root[data-theme="dark"] .bgphoto::after{background:linear-gradient(160deg,rgba(40,6,28,.5),rgba(16,4,26,.66))}
+.orbs i{opacity:.35}
+.hero{align-items:flex-end;padding-top:46vh;padding-top:46svh}
 </style>
 </head>
 <body>
+<div class="bgphoto" aria-hidden="true"></div>
 <div class="orbs"><i></i><i></i><i></i></div>
 <canvas id="water" aria-hidden="true"></canvas>
 <div id="intro">
