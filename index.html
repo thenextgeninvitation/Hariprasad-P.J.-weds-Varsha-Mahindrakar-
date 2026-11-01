@@ -6,17 +6,17 @@
 <title>Hariprasad weds Varsha — Wedding Invitation</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&family=Yellowtail&display=swap">
 <style>
-:root{--bg1:#fdeef5;--bg2:#efe3ff;--fg:#2b1020;--soft:#6a4559;--acc:#c2185b;--acc2:#b8860b;
---glass:rgba(255,255,255,.55);--glass2:rgba(255,255,255,.35);--edge:rgba(255,255,255,.8);--shadow:0 10px 40px rgba(120,30,80,.15);
+:root{--bg1:#fdeef5;--bg2:#efe3ff;--fg:#1c0a14;--soft:#3f2433;--acc:#a0104a;--acc2:#7a4e00;
+--glass:rgba(255,255,255,.68);--glass2:rgba(255,255,255,.5);--edge:rgba(255,255,255,.9);--shadow:0 10px 40px rgba(120,30,80,.15);
 --o1:#ff7ab8;--o2:#ffd27a;--o3:#a98bff;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#12041a;--bg2:#2a0a2e;--fg:#fbefff;--soft:#cfb4d6;--acc:#ff7bb8;--acc2:#f6cf75;
---glass:rgba(255,255,255,.08);--glass2:rgba(255,255,255,.05);--edge:rgba(255,255,255,.22);--shadow:0 10px 40px rgba(0,0,0,.45);--o1:#d81b72;--o2:#c9892b;--o3:#6a3df0}}
-:root[data-theme="dark"]{--bg1:#12041a;--bg2:#2a0a2e;--fg:#fbefff;--soft:#cfb4d6;--acc:#ff7bb8;--acc2:#f6cf75;
---glass:rgba(255,255,255,.08);--glass2:rgba(255,255,255,.05);--edge:rgba(255,255,255,.22);--shadow:0 10px 40px rgba(0,0,0,.45);--o1:#d81b72;--o2:#c9892b;--o3:#6a3df0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#12041a;--bg2:#2a0a2e;--fg:#ffffff;--soft:#f3e4ee;--acc:#ff9ac6;--acc2:#ffd67a;
+--glass:rgba(18,5,24,.55);--glass2:rgba(255,255,255,.09);--edge:rgba(255,255,255,.3);--shadow:0 10px 40px rgba(0,0,0,.45);--o1:#d81b72;--o2:#c9892b;--o3:#6a3df0}}
+:root[data-theme="dark"]{--bg1:#12041a;--bg2:#2a0a2e;--fg:#ffffff;--soft:#f3e4ee;--acc:#ff9ac6;--acc2:#ffd67a;
+--glass:rgba(18,5,24,.55);--glass2:rgba(255,255,255,.09);--edge:rgba(255,255,255,.3);--shadow:0 10px 40px rgba(0,0,0,.45);--o1:#d81b72;--o2:#c9892b;--o3:#6a3df0}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;color:var(--fg);font-family:'Inter',system-ui,sans-serif;font-weight:300;font-size:16px;line-height:1.7;text-align:center;
+body{margin:0;min-height:100vh;color:var(--fg);font-family:'Inter',system-ui,sans-serif;font-weight:400;font-size:17px;line-height:1.7;text-align:center;
 background:linear-gradient(160deg,var(--bg1),var(--bg2));background-attachment:fixed;overflow-x:hidden}
 .orbs{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
 .orbs i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:float 18s ease-in-out infinite}
@@ -27,7 +27,7 @@ background:linear-gradient(160deg,var(--bg1),var(--bg2));background-attachment:f
 section{padding:60px 18px}
 .wrap{max-width:760px;margin:0 auto}
 .glass{background:var(--glass);border:1px solid var(--edge);border-radius:28px;box-shadow:var(--shadow),inset 0 1px 0 var(--edge);
--webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);padding:36px 24px}
+-webkit-backdrop-filter:blur(12px) saturate(150%);backdrop-filter:blur(12px) saturate(150%);padding:36px 24px}
 .tag{display:inline-block;padding:6px 16px;border:1px solid var(--edge);border-radius:999px;background:var(--glass2);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
 h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;margin:0;line-height:1.15}
 h2{font-size:clamp(30px,6vw,44px);margin:16px 0 14px}
@@ -100,10 +100,19 @@ html.locked,html.locked body{overflow:hidden;height:100%}
 .bgphoto .ph{position:absolute;inset:0;background:var(--photo) 50% 0/contain no-repeat}
 @media (max-aspect-ratio:5/6){.bgphoto .ph{background-size:cover}}
 @media (min-aspect-ratio:5/6){.bgphoto .ph{-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}}
-.bgphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,236,246,.04) 0%,rgba(255,236,246,.12) 52%,rgba(238,226,255,.62) 80%)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,.04) 0%,rgba(30,5,25,.2) 52%,rgba(16,4,26,.72) 80%)}}
-:root[data-theme="dark"] .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,.04) 0%,rgba(30,5,25,.2) 52%,rgba(16,4,26,.72) 80%)}
-.orbs i{opacity:.22}
+.bgphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,236,246,0) 0%,rgba(255,236,246,.04) 52%,rgba(238,226,255,.26) 85%)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,0) 0%,rgba(30,5,25,.1) 52%,rgba(16,4,26,.38) 85%)}}
+:root[data-theme="dark"] .bgphoto::after{background:linear-gradient(180deg,rgba(40,6,28,0) 0%,rgba(30,5,25,.1) 52%,rgba(16,4,26,.38) 85%)}
+.tag{font-size:12px;font-weight:600}
+.bless{font-size:14px}
+.count span{font-size:11px;color:var(--fg)}
+.fam div,.wel li{font-size:15px;color:var(--fg)}
+.when{font-weight:600}
+p{color:var(--soft)}
+#events .wrap>.rv{background:var(--glass);border:1px solid var(--edge);border-radius:24px;padding:22px 16px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+footer .wrap,.copy{text-shadow:none}
+.orbs i{opacity:.14}
+footer .wrap{background:var(--glass);border:1px solid var(--edge);border-radius:24px;padding:22px 16px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
 .hero{align-items:flex-end;padding-top:58vh;padding-top:58svh}
 </style>
 </head>
